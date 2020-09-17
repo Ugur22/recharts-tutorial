@@ -1,11 +1,11 @@
 
 ## Recharts-tutorial
 
-This platform uses react-map-gl and deck.gl to render Mapbox maps with different layers on top. With this data viz you can find out how many people have recovered, contracted and died by the COVID-19 virus in each country.
+This dashboard uses Recharts to show users how many people have contracted, died en recovered from the covid-19 virus.
 
  <!-- [Live demo](https://ncov19update.com) -->
 
-![Example Image of the webapp](https://i.imgur.com/EVe568i.png)
+![Example Image of the webapp](https://i.imgur.com/mGv4r57.png)
 
 This application was build using the following tools:
 - [Recharts](http://recharts.org/en-US)
