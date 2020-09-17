@@ -1,0 +1,58 @@
+.dashboard {
+    padding:20px;
+
+    button {
+        border: 0;
+        background: transparent;
+        padding: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .column {
+        background-color:#fff;
+        margin: 20px;
+        border-radius: 5px;
+        position: relative;
+
+        &__button {
+            font-size: 2rem;
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				content: '';
+                z-index: 1;
+            }
+
+            &:hover,&:focus {
+                outline: 0;
+                &:before {
+                    border-bottom: 4px solid black; 
+                }
+            }
+		}
+    }  
+
+    .line-graph {
+        height: 500px;
+    }
+}
+
+.selected {
+    color:#3498db;
+
+    &:before {
+        content:'';
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        box-shadow: 2px 5px 2px 2px black;
+    }
+}

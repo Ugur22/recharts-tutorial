@@ -1,20 +1,27 @@
 {
   "name": "recharts-tutorial",
   "version": "0.1.0",
+  "main": "sass/style.scss",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "bulma": "^0.9.0",
+    "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "recharts": "^1.8.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1"
   },
   "eslintConfig": {
     "extends": "react-app"
