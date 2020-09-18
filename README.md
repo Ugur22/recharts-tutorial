@@ -3,7 +3,7 @@
 
 This dashboard uses Recharts to show users how many people have contracted, died en recovered from the covid-19 virus.
 
- <!-- [Live demo](https://ncov19update.com) -->
+ [Live demo](https://recharts-tutorial.web.app/)
 
 ![Example Image of the webapp](https://i.imgur.com/mGv4r57.png)
 

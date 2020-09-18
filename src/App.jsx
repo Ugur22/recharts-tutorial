@@ -10,6 +10,7 @@ function App() {
   let [type, setType] = useState("Active");
   let [color, setColor] = useState("#e67e22");
   let [activeIndex, setActive] = useState(0);
+  let country;
 
 
   useEffect(() => {
@@ -34,6 +35,9 @@ function App() {
 
   const amount_recovered = data.map((a) => a.Recovered);
   let latest_recovered = Math.max(...amount_recovered);
+
+  const getCountries = data.map((a) => a.Country);
+  country = getCountries.slice(0,1);
 
   const BUTTONS = [
     {
@@ -96,6 +100,7 @@ function App() {
   return (
     <div>
       <div className="dashboard">
+      <h1 className="title is-1">{country}</h1>
         <div className="columns">
           {BUTTONS.map((item, index) =>
             <div className="column" key={index} >
