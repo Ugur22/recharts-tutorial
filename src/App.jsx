@@ -114,17 +114,18 @@ function App() {
             </div>
           )}
         </div>
-        <div className="columns">
-          <div className="column line-graph">
+        <div className="columns graphs">
+          <div className="column is-half line-graph">
             <h3 className="title is-5">{type} cases</h3>
             <ResponsiveContainer width={'100%'} height={'90%'}>
               <LineChart data={data}
                 margin={{ top: 5, right: 70, left: 10, bottom: 5 }} >
                 <XAxis dataKey="Date" tickCount={10} tick={CustomizedAxisTick} minTickGap={2} tickSize={7} dx={14} allowDataOverflow={true} />
                 <YAxis />
-                <Tooltip content={<CustomTooltip />} />
+                <Tooltip content={<CustomTooltip />} animationDuration={0} />
                 <Legend />
-                <Line type="natural" dataKey={type} stroke={color} dot={false} />
+                <Line type="natural" dataKey={type} stroke={color} dot={false} strokeWidth={3} travellerWidth={4} 
+                 activeDot={{ fill: "#000000", stroke: "#FFFFFF", strokeWidth: 1, r: 5 }} />
                 <Brush dataKey="Date" tickFormatter={xAxisTickFormatter} startIndex={Math.round(data.length * 0.45)}>
                   <LineChart >
                     <Line fill={color} type="natural" dataKey={type} stroke={color} strokeWidth={1} name={type} dot={false} />
@@ -133,7 +134,7 @@ function App() {
               </LineChart>
             </ResponsiveContainer>
           </div>
-          <div className="column">
+          <div className="column is-half bar-chart">
             <h3 className="title is-5">{type} cases</h3>
             <ResponsiveContainer width={'100%'} height={'90%'}>
               <BarChart

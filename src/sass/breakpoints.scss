@@ -1,0 +1,43 @@
+// Breakpoint mixins
+
+// Small devices
+
+@mixin breakpoint-sm {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+// Small screen desktop max
+@mixin breakpoint-sm-big-max {
+	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+// Small devices mobile
+@mixin breakpoint-max-sm {
+	@media (max-width: 415px) {
+		@content;
+	}
+}
+
+// Medium devices
+@mixin breakpoint-md {
+	@media (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin breakpoint-max-md {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+// Large devices
+@mixin breakpoint-lg {
+	@media (min-width: 1400px) {
+		@content;
+	}
+}
