@@ -14,17 +14,20 @@
   }
 
   .graphs {
-    height: 500px;
+    height: auto;
+
     @include breakpoint-sm {
+      height: 380px;
       margin-right: 70px;
     }
 
-    @include breakpoint-max-sm {
+    .bar-chart,
+    .line-graph,
+    .area-chart {
+      height: 300px;
+
+      @include breakpoint-sm {
       height: auto;
-      .bar-chart,
-      .line-graph,
-      .area-chart {
-        height: 300px;
       }
     }
   }
