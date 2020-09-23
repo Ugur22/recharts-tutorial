@@ -10,7 +10,7 @@ function App() {
   let [type, setType] = useState("Active");
   let [color, setColor] = useState("#e67e22");
   let [activeIndex, setActive] = useState(0);
-  let [padding, setPadding] = useState(70);
+  let [padding, setPadding] = useState(10);
   let country;
 
   const orange = '#e67e22';
@@ -111,7 +111,7 @@ function App() {
       {data.length > 0 && (
         <div className="dashboard">
           <h1 className="title is-2">{country} Covid-19 cases</h1>
-          <div className="columns">
+          <div className="columns dashboard__numbers">
             {BUTTONS.map((item, index) =>
               <div className="column" key={index} >
                 <h2>
