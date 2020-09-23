@@ -6,17 +6,19 @@ import {
 import moment from "moment";
 
 function App() {
-  let [data, setData] = useState([]);
-  let [type, setType] = useState("Active");
-  let [color, setColor] = useState("#e67e22");
-  let [activeIndex, setActive] = useState(0);
-  let [padding, setPadding] = useState(10);
-  let country;
 
   const orange = '#e67e22';
   const red = '#e74c3c';
   const green = '#27ae60';
   const darkgrey = "#363636";
+  
+  let [data, setData] = useState([]);
+  let [type, setType] = useState("Active");
+  let [color, setColor] = useState(orange);
+  let [activeIndex, setActive] = useState(0);
+  let [padding, setPadding] = useState(10);
+  let country;
+
   // 100 x cases /   total of type cases(recovered, active or deaths) / total cases
 
   useEffect(() => {
@@ -110,7 +112,7 @@ function App() {
     <div>
       {data.length > 0 && (
         <div className="dashboard">
-          <h1 className="title is-2">{country} Covid-19 cases</h1>
+          <h1 className="title is-3">{country} Covid-19 cases</h1>
           <div className="columns dashboard__numbers">
             {BUTTONS.map((item, index) =>
               <div className="column" key={index} >
